@@ -6,7 +6,7 @@ Having more than 5 years of experience as a Quality Assurance Engineer. Dedicate
 
 **11/2020 to now**
 
-**Quality Assurance Specialist - SDET [LinkAja](https://www.linkaja.id), Yogyakarta**
+**Quality Assurance Specialist - SDET [LINKAJA](https://www.linkaja.id), Yogyakarta**
 > - Working in the squads to create
 the Automated testing on the User Interface and API, and also maintain the integration test (CICD).
 - Creating scripts for performance tests
@@ -88,11 +88,19 @@ mobile apps.
 - Java [*]()
 
 Scale:
-1. understand [* *]()
-2. familiar [* * * *]()
+1. understand   [* *]()
+2. familiar     [* * * *]()
 3. part of life [* * * * *]()
 
 ### Portfolio
+
+- Sebangsa.com Test - Python Selenium Webdriver [Web AT]
+- Automationpractice.com Test - [Web AT]
+- Reqress.in Test - [API AT]
+- SindoNews Test - [Android AT]
+- Kumparan.com Test - [Web AT]
+- Google.com Test - [Web AT]
+- For more detail check on [Repository](https://github.com/damarmustikoaji?tab=repositories)
 
 ### Contact
 
