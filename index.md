@@ -53,15 +53,15 @@ mobile apps.
 
 ### Tools
 
-- TestRails Management :one:
-- Jira and Confluence (atlassian)
-- Trello
-- Postman
-- Table Plus
-- Visual Studio Code
-- Github and Gitlab
-- Ngrok and Mockoon (for Mocking Case)
-- Grafana
+- TestRails Management [* * * *]()
+- Jira and Confluence (atlassian) [* * * *]()
+- Trello [* * *]()
+- Postman [* * * * *]()
+- Table Plus [* * * *]()
+- Visual Studio Code [* * * *]()
+- Github and Gitlab [* * * *]()
+- Ngrok and Mockoon (for Mocking Case) [* * *]()
+- Grafana [* * *]()
 - Kibana
 - Datadog
 - K6 (for Performance Test)
@@ -74,6 +74,8 @@ mobile apps.
 - Cucumber
 - Docker
 - Word, Spreadsheet (excel)
+
+Scale: -> [* *]() understand -> [* * * *]() familiar -> [* * * * *]() part of life
 
 ### Programming Language
 - Python
