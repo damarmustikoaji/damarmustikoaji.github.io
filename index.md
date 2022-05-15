@@ -1,4 +1,3 @@
-## Damar Mustiko Aji
 ![image](https://media-exp1.licdn.com/dms/image/C4D03AQHC9y1yDBp_kg/profile-displayphoto-shrink_200_200/0/1618389462869?e=1658361600&v=beta&t=V97Nx7U4h-agCkD0gX9GZRk7yaKyQ9BxTF136OPDJ84)
 
 Having more than 5 years of experience as a Quality Assurance Engineer. Dedicated to ensuring the quality of software products by testing products and solving problems. I have an interest in automation testing. A software tester, who likes to learn a new thing about technology to increase the testing ability skill.
@@ -6,6 +5,7 @@ Having more than 5 years of experience as a Quality Assurance Engineer. Dedicate
 ### Experience
 
 **11/2020 to now**
+
 **Quality Assurance Specialist - SDET [LinkAja](https://www.linkaja.id), Yogyakarta**
 > - Working in the squads to create
 the Automated testing on the User Interface and API, and also maintain the integration test (CICD).
@@ -15,6 +15,7 @@ the Automated testing on the User Interface and API, and also maintain the integ
 - The product: Promo and Loyalty Points, Smartbiller - Digital Goods, and E-Kyc Management (microservice-based).
 
 **03/2019 to 10/2020**
+
 **Quality Engineer [RALALI.COM](https://www.ralali.com), Yogyakarta**
 > - Working in the squad on the Fintech tribe to do creating
 the test case and testing on the User Interface and API.
@@ -25,6 +26,7 @@ integration test on CI-CD.
 Credit.
 
 **09/2018 to 02/2019**
+
 **Quality Assurance Engineer [MAUKERJA.ID](https://www.maukerja.id) / [A JOB THING](https://www.maukerja.id), Yogyakarta**
 > - Working with the team to do creating the test case,
 manually testing on functionality, and also performance
@@ -34,12 +36,15 @@ mobile apps.
 - The Product: Soulusi.com web and mobile apps, EasyEarn mobile apps, and social credit microservices.
 
 **09/2017 to 08/2018**
+
 **Quality Assurance Engineer [WONDERLABS](https://wonderlabs.io), Yogyakarta**
 
 **07/2017 to 08/2017**
+
 **Quality Assurance Automation Specialist [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
 **03/2015 to 06/2017**
+
 **Quality Assurance [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
 ### Skill
@@ -76,8 +81,11 @@ mobile apps.
 - Word, Spreadsheet (excel) [* * * * *]()
 
 ### Programming Language
+
+- PHP [* * *]()
 - Python [* * *]()
 - JavaScript [* * * *]()
+- Java [*]()
 
 Scale:
 1. understand [* *]()
