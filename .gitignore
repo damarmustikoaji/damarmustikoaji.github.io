@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+sdet/test/node_modules
+reports
+.env
+*.zip
+credentials.json
+token.json

@@ -87,18 +87,19 @@ mobile apps.
 - JavaScript [* * * *]()
 - Java [*]()
 
-```
 Scale:
 1. understand   [* *]
 2. familiar     [* * * *]
 3. part of life [* * * * *]
-```
 
 ### Portfolio
 
+- Reqress.in Test - [API AT]
+![image](./assets/durian_atapi.png)
+
+
 - Sebangsa.com Test - Python Selenium Webdriver [Web AT]
 - Automationpractice.com Test - [Web AT]
-- Reqress.in Test - [API AT]
 - SindoNews Test - [Android AT]
 - Kumparan.com Test - [Web AT]
 - Google.com Test - [Web AT]
@@ -106,4 +107,4 @@ Scale:
 
 ### Contact
 
-Have trouble with Me? Check out the [documentation](https://www.linkedin.com/in/damar-mustikoaji/) to help you sort it out.
+Have trouble with me? Check out the [documentation](https://www.linkedin.com/in/damar-mustikoaji/) to help you sort it out.
