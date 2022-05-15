@@ -62,24 +62,27 @@ mobile apps.
 - Github and Gitlab [* * * *]()
 - Ngrok and Mockoon (for Mocking Case) [* * *]()
 - Grafana [* * *]()
-- Kibana
-- Datadog
-- K6 (for Performance Test)
-- Cypress
-- Selenium WebDriver
-- Appium
-- Robot Framework
-- Mocha and Chai
-- Katalon
-- Cucumber
-- Docker
-- Word, Spreadsheet (excel)
-
-Scale: -> [* *]() understand -> [* * * *]() familiar -> [* * * * *]() part of life
+- Kibana [* * *]()
+- Datadog [* * *]()
+- K6 (for Performance Test) [* * *]()
+- Cypress [* * *]()
+- Selenium WebDriver [* * *]()
+- Appium [* * *]()
+- Robot Framework [* * * *]()
+- Mocha and Chai [* * * * *]()
+- Katalon [* * *]()
+- Cucumber [* * *]()
+- Docker [*]()
+- Word, Spreadsheet (excel) [* * * * *]()
 
 ### Programming Language
-- Python
-- JavaScript
+- Python [* * *]()
+- JavaScript [* * * *]()
+
+Scale:
+1. understand [* *]()
+2. familiar [* * * *]()
+3. part of life [* * * * *]()
 
 ### Portfolio
 
