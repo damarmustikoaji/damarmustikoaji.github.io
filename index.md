@@ -4,7 +4,7 @@ Having more than 5 years of experience as a Quality Assurance Engineer. Dedicate
 
 ### Experience
 
-**11/2020 to now**
+*`November 2020 to now`*
 
 **Quality Assurance Specialist - SDET [LINKAJA](https://www.linkaja.id), Yogyakarta**
 > - Working in the squads to create
@@ -14,7 +14,7 @@ the Automated testing on the User Interface and API, and also maintain the integ
 - Support sanity testing on release deployment
 - The product: Promo and Loyalty Points, Smartbiller - Digital Goods, and E-Kyc Management (microservice-based).
 
-**03/2019 to 10/2020**
+*`March 2019 to October 2020`*
 
 **Quality Engineer [RALALI.COM](https://www.ralali.com), Yogyakarta**
 > - Working in the squad on the Fintech tribe to do creating
@@ -25,7 +25,7 @@ integration test on CI-CD.
 - The Fintech tribe has a product: Wallet, Billing, and R-
 Credit.
 
-**09/2018 to 02/2019**
+*`September 2018 to February 2019`*
 
 **Quality Assurance Engineer [MAUKERJA.ID](https://www.maukerja.id) / [A JOB THING](https://www.maukerja.id), Yogyakarta**
 > - Working with the team to do creating the test case,
@@ -35,15 +35,15 @@ testing.
 mobile apps.
 - The Product: Soulusi.com web and mobile apps, EasyEarn mobile apps, and social credit microservices.
 
-**09/2017 to 08/2018**
+*September 2017 to Augustus 2018*
 
 **Quality Assurance Engineer [WONDERLABS](https://wonderlabs.io), Yogyakarta**
 
-**07/2017 to 08/2017**
+*July 2017 to Augustus 2017*
 
 **Quality Assurance Automation Specialist [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
-**03/2015 to 06/2017**
+*March 2015 to June 2017*
 
 **Quality Assurance [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
