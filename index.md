@@ -47,7 +47,7 @@ mobile apps.
 
 **Quality Assurance [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
-### Skill
+### Highlights
 
 - Manual Testing: website, mobile apps (android, ios), API (backend) 
 - Automation Testing: Website, API, Mobile apps (android)
@@ -80,7 +80,7 @@ mobile apps.
 - Docker [*]()
 - Word, Spreadsheet (excel) [* * * * *]()
 
-### Programming Language
+### Programming
 
 - PHP [* * *]()
 - Python [* * *]()
