@@ -1,37 +1,63 @@
-## Damar Mustiko Aji
+### Damar Mustiko Aji
 
-You can use the [editor on GitHub](https://github.com/damarmustikoaji/damarmustikoaji.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Having more than 5 years of experience as a Quality Assurance Engineer. Dedicated to ensuring the quality of software products by testing products and solving problems. I have an interest in automation testing. A software tester, who likes to learn a new thing about technology to increase the testing ability skill.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Experience
 
-### Markdown
+**11/2020 to now**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Quality Assurance Specialist - SDET [LinkAja](https://www.linkaja.id), Yogyakarta**
+> - Working in the squads to create the Automated testing on the User Interface and API, and also maintain the integration test (CICD).
+> - Creating scripts for performance tests
+> - Research on the automation test tools
+> - Support sanity testing on release deployment
+> - The product: Promo and Loyalty Points, Smartbiller - Digital Goods, and E-Kyc Management (microservice-based).
 
-```markdown
-Syntax highlighted code block
+**03/2019 to 10/2020**
 
-# Header 1
-## Header 2
-### Header 3
+**Quality Engineer [RALALI.COM](https://www.ralali.com), Yogyakarta**
+> - Working in the squad on the Fintech tribe to do creating the test case and testing on the User Interface and API.
+> - On every sprint creating the automation testing on API and UI related to the feature, and also maintaining integration test on CI-CD.
+> - The Fintech tribe has a product: Wallet, Billing, and R-
+Credit.
 
-- Bulleted
-- List
+**09/2018 to 02/2019**
 
-1. Numbered
-2. List
+**Quality Assurance Engineer [MAUKERJA.ID](https://www.maukerja.id) / [A JOB THING](https://www.maukerja.id), Yogyakarta**
+> - Working with the team to do creating the test case,
+manually testing on functionality, and also performance
+testing.
+> - Creating automation testing on the website and android
+mobile apps.
+> - The Product: Soulusi.com web and mobile apps, EasyEarn mobile apps, and social credit microservices.
 
-**Bold** and _Italic_ and `Code` text
+**09/2017 to 08/2018**
 
-[Link](url) and ![Image](src)
-```
+**Quality Assurance Engineer [WONDERLABS](https://wonderlabs.io), Yogyakarta**
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+**07/2017 to 08/2017**
 
-### Jekyll Themes
+**Quality Assurance Automation Specialist [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/damarmustikoaji/damarmustikoaji.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+**03/2015 to 06/2017**
 
-### Support or Contact
+**Quality Assurance [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Skill
+
+- Manual Testing: website, mobile apps (android, ios), API (backend)
+- Automation Testing: Website, API
+- Management Test cases
+
+### Tools
+
+- TestRails Management
+- Jira
+- Trello
+- Postman
+
+### Portfolio
+
+### Contact
+
+Have trouble with Me? Check out the [documentation](https://www.linkedin.com/in/damar-mustikoaji/) to help you sort it out.
