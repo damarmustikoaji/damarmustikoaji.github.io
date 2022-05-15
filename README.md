@@ -1,3 +1,0 @@
-# damarmustikoaji.github.io
-
-cocobaaaa
