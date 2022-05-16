@@ -94,8 +94,11 @@ Scale:
 
 ### Portfolio
 
-- Reqress.in Test - [API AT]
-[![image](./assets/durian_atapi.png)](./assets/durian_atapi.png)
+- Reqress.in Test - NodeJS Mocha & Chai [API AT]
+  - Run https://github.com/damarmustikoaji/durian/actions
+    [![image](./assets/durian_atapi.png)](./assets/durian_atapi.png)
+  - Reports
+    [![](./assets/durian_atapi_reports.png)](./assets/durian_atapi_reports.png)
 
 
 - Sebangsa.com Test - Python Selenium Webdriver [Web AT]
