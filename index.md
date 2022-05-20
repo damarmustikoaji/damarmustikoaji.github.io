@@ -99,13 +99,12 @@ Scale:
     [![image](./assets/durian_atapi.png)](./assets/durian_atapi.png)
   - Reports
     [![](./assets/durian_atapi_reports.png)](./assets/durian_atapi_reports.png)
-
-
-- Sebangsa.com Test - Python Selenium Webdriver [Web AT]
-- Automationpractice.com Test - [Web AT]
-- SindoNews Test - [Android AT]
-- Kumparan.com Test - [Web AT]
-- Google.com Test - [Web AT]
+- Google.com Test - Cypress & Cucumber [WEB AT]
+  - Run https://github.com/damarmustikoaji/timun/actions
+    [![image](./assets/timun_atweb_run.png)](./assets/timun_atweb_run.png)
+  - Reports
+    [![](./assets/timun_atweb_report1.png)](./assets/timun_atweb_report1.png)
+    [![](./assets/timun_atweb_report2.png)](./assets/timun_atweb_report2.png)
 - For more detail check on [Repository](https://github.com/damarmustikoaji?tab=repositories)
 
 ### Contact
