@@ -105,6 +105,9 @@ Scale:
   - Reports
     [![](./assets/timun_atweb_report1.png)](./assets/timun_atweb_report1.png)
     [![](./assets/timun_atweb_report2.png)](./assets/timun_atweb_report2.png)
+- Ralali.com Test - Python & Behave (cucumber) [WEB AT]
+  - Run https://github.com/damarmustikoaji/mangga/actions/workflows/main.yml
+    [![image](./assets/mangga_atweb.png)](./assets/mangga_atweb.png)
 - For more detail check on [Repository](https://github.com/damarmustikoaji?tab=repositories)
 
 ### Contact
