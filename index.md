@@ -6,7 +6,7 @@ Having more than 5 years of experience as a Quality Assurance Engineer. Dedicate
 
 **November 2020 to now**
 
-**`Quality Assurance Specialist - SDET` [LINKAJA](https://www.linkaja.id), Yogyakarta**
+**`Quality Assurance Specialist - SDET` <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/1200px-LinkAja.svg.png" width="20"> [LINKAJA](https://www.linkaja.id), Yogyakarta**
 > - Working in the squads to create
 the Automated testing on the User Interface and API, and also maintain the integration test (CICD).
 - Creating scripts for performance tests
@@ -16,7 +16,7 @@ the Automated testing on the User Interface and API, and also maintain the integ
 
 *March 2019 to October 2020*
 
-**`Quality Engineer` [RALALI.COM](https://www.ralali.com), Yogyakarta**
+**`Quality Engineer` <img src="https://4.bp.blogspot.com/-2qBCw_P_ppw/XE7mRxAEWqI/AAAAAAAAH0g/pPHtl0R4NYw5Fhzts0u37ZEgHOn40PrwgCLcBGAs/s1600/ralali%2Blogo.png" width="12"> [RALALI.COM](https://www.ralali.com), Yogyakarta**
 > - Working in the squad on the Fintech tribe to do creating
 the test case and testing on the User Interface and API.
 - On every sprint creating the automation testing on API
@@ -27,7 +27,7 @@ Credit.
 
 *September 2018 to February 2019*
 
-**`Quality Assurance Engineer` [MAUKERJA.ID](https://www.maukerja.id) / [A JOB THING](https://www.maukerja.id), Yogyakarta**
+**`Quality Assurance Engineer` <img src="https://files.ajobthing.com/assets/logo/maukerja.png" width="25"> [MAUKERJA.ID](https://www.maukerja.id) / [A JOB THING](https://www.maukerja.id), Yogyakarta**
 > - Working with the team to do creating the test case,
 manually testing on functionality, and also performance
 testing.
@@ -37,15 +37,15 @@ mobile apps.
 
 *September 2017 to Augustus 2018*
 
-**`Quality Assurance Engineer` [WONDERLABS](https://wonderlabs.io), Yogyakarta**
+**`Quality Assurance Engineer` <img src="https://cdn.techinasia.com/data/images/044c44d9bfc13eedf3e4faaad7a19db7.png" width="20"> [WONDERLABS](https://wonderlabs.io), Yogyakarta**
 
 *July 2017 to Augustus 2017*
 
-**`Quality Assurance Automation Specialist` [SEBANGSA](https://sebangsa.com), Yogyakarta**
+**`Quality Assurance Automation Specialist` <img src="https://img.favpng.com/9/16/12/pt-sebangsa-bersama-social-media-avatar-musik-indonesia-png-favpng-NdhJeQrdN5uWFfxppCyAtJd1D.jpg" width="20"> [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
 *March 2015 to June 2017*
 
-**`Quality Assurance` [SEBANGSA](https://sebangsa.com), Yogyakarta**
+**`Quality Assurance` <img src="https://img.favpng.com/9/16/12/pt-sebangsa-bersama-social-media-avatar-musik-indonesia-png-favpng-NdhJeQrdN5uWFfxppCyAtJd1D.jpg" width="20"> [SEBANGSA](https://sebangsa.com), Yogyakarta**
 
 ### Highlights
 
