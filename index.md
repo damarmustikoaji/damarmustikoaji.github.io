@@ -112,4 +112,4 @@ Scale:
 
 ### Contact
 
-Have trouble with me? Check out <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15"> the [documentation](https://www.linkedin.com/in/damar-mustikoaji/) to help you sort it out.
+Have trouble with me? Check out the **[Linked](https://www.linkedin.com/in/damar-mustikoaji/) <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="17">** to help you sort it out.
