@@ -95,19 +95,30 @@ Scale:
 ### Portfolio
 
 - Reqress.in Test - NodeJS Mocha & Chai [API AT]
-  - Run https://github.com/damarmustikoaji/durian/actions
+  - Run [https://github.com/damarmustikoaji/durian/actions](https://github.com/damarmustikoaji/durian/actions)
     [![image](./assets/durian_atapi.png)](./assets/durian_atapi.png)
   - Reports
     [![](./assets/durian_atapi_reports.png)](./assets/durian_atapi_reports.png)
 - Google.com Test - Cypress & Cucumber [WEB AT]
-  - Run https://github.com/damarmustikoaji/timun/actions
+  - Run [https://github.com/damarmustikoaji/timun/actions](https://github.com/damarmustikoaji/timun/actions)
     [![image](./assets/timun_atweb_run.png)](./assets/timun_atweb_run.png)
   - Reports
     [![](./assets/timun_atweb_report1.png)](./assets/timun_atweb_report1.png)
     [![](./assets/timun_atweb_report2.png)](./assets/timun_atweb_report2.png)
+- Ralali.com Test - Cypress [WEB AT]
+  - Run [https://github.com/damarmustikoaji/pisang/actions](https://github.com/damarmustikoaji/pisang/actions)
+    [![image](./assets/pisang_atweb.png)](./assets/pisang_atweb.png)
+    [![image](./assets/pisang_atweb1.png)](./assets/pisang_atweb1.png)
+  - Reports
+    [![image](./assets/pisang_atweb2.png)](./assets/pisang_atweb2.png)
 - Ralali.com Test - Python & Behave (cucumber) [WEB AT]
-  - Run https://github.com/damarmustikoaji/mangga/actions/workflows/main.yml
+  - Run [https://github.com/damarmustikoaji/mangga/actions](https://github.com/damarmustikoaji/mangga/actions)
     [![image](./assets/mangga_atweb.png)](./assets/mangga_atweb.png)
+- Jambu API Test - Postman Colletion - Newman [API AT]
+  - Run [https://github.com/damarmustikoaji/kelapa/actions](https://github.com/damarmustikoaji/kelapa/actions)
+    [![image](./assets/kelapa_postman_atapi.png)](./assets/kelapa_postman_atapi.png)
+    [![image](./assets/kelapa_postman_atapi1.png)](./assets/kelapa_postman_atapi1.png)
+    [![image](./assets/kelapa_postman_atapi2.png)](./assets/kelapa_postman_atapi2.png)
 - For more detail check on [Repository](https://github.com/damarmustikoaji?tab=repositories)
 
 ### Contact
