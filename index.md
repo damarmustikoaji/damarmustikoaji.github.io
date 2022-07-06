@@ -1,6 +1,8 @@
-![image](https://media-exp1.licdn.com/dms/image/C4D03AQHC9y1yDBp_kg/profile-displayphoto-shrink_200_200/0/1618389462869?e=1658361600&v=beta&t=V97Nx7U4h-agCkD0gX9GZRk7yaKyQ9BxTF136OPDJ84)
+![image](https://media-exp2.licdn.com/dms/image/C5616AQENsTYZiHyLDQ/profile-displaybackgroundimage-shrink_200_800/0/1644221910284?e=1662595200&v=beta&t=YXX-Ikdw3FHH8HMxlyn49e4CM9_zdImrtnhQayJSatI)
 
 Having more than 5 years of experience as a Quality Assurance Engineer. Dedicated to ensuring the quality of software products by testing products and solving problems. I have an interest in automation testing. A software tester, who likes to learn a new thing about technology to increase the testing ability skill.
+
+![image](https://media-exp1.licdn.com/dms/image/C4D03AQHC9y1yDBp_kg/profile-displayphoto-shrink_200_200/0/1618389462869?e=1658361600&v=beta&t=V97Nx7U4h-agCkD0gX9GZRk7yaKyQ9BxTF136OPDJ84)
 
 ### Experience
 
@@ -99,19 +101,19 @@ Scale:
     [![image](./assets/durian_atapi.png)](./assets/durian_atapi.png)
   - Reports
     [![](./assets/durian_atapi_reports.png)](./assets/durian_atapi_reports.png)
-- **`Cypress x Cucumber [WEB AT]`** - Google.com Test
+- **`NodeJS Cypress x Cucumber [WEB AT]`** - Google.com Test
   - Run [https://github.com/damarmustikoaji/timun/actions](https://github.com/damarmustikoaji/timun/actions)
     [![image](./assets/timun_atweb_run.png)](./assets/timun_atweb_run.png)
   - Reports
     [![](./assets/timun_atweb_report1.png)](./assets/timun_atweb_report1.png)
     [![](./assets/timun_atweb_report2.png)](./assets/timun_atweb_report2.png)
-- **`Cypress and Dashboard [WEB AT]`** - Ralali.com Test
+- **`NodeJS Cypress and Dashboard [WEB AT]`** - Ralali.com Test
   - Run [https://github.com/damarmustikoaji/pisang/actions](https://github.com/damarmustikoaji/pisang/actions)
     [![image](./assets/pisang_atweb.png)](./assets/pisang_atweb.png)
     [![image](./assets/pisang_atweb1.png)](./assets/pisang_atweb1.png)
   - Reports
     [![image](./assets/pisang_atweb2.png)](./assets/pisang_atweb2.png)
-- **`Python & Behave (cucumber) [WEB AT]`** - Ralali.com Test
+- **`Python Behave (cucumber) x Selenium Webdriver [WEB AT]`** - Ralali.com Test
   - Run [https://github.com/damarmustikoaji/mangga/actions](https://github.com/damarmustikoaji/mangga/actions)
     [![image](./assets/mangga_atweb.png)](./assets/mangga_atweb.png)
 - **`Postman Colletion x Newman [API AT]`** - Jambu API Test
