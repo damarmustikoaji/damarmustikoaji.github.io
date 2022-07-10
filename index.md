@@ -117,12 +117,12 @@ Scale:
   - Run [https://github.com/damarmustikoaji/mangga/actions](https://github.com/damarmustikoaji/mangga/actions)
     [![image](./assets/mangga_atweb.png)](./assets/mangga_atweb.png)
 - **`Python Robot Framework [API AT]`** - thetestingwolrdapi API Test
-  - Run [https://github.com/damarmustikoaji/kelapa/actions](https://github.com/damarmustikoaji/tomat/actions)
+  - Run [https://github.com/damarmustikoaji/tomat/actions](https://github.com/damarmustikoaji/tomat/actions)
     [![image](./assets/tomat_atapi.png)](./assets/tomat_atapi.png)
     [![image](./assets/tomat_atapi1.png)](./assets/tomat_atapi1.png)
     [![image](./assets/tomat_atapi2.png)](./assets/tomat_atapi2.png)
 - **`Python Robot Framework x Selenium Library [WEB AT]`** - google.com Test
-  - Run [https://github.com/damarmustikoaji/labu/actions](https://github.com/damarmustikoaji/tomat/actions)
+  - Run [https://github.com/damarmustikoaji/labu/actions](https://github.com/damarmustikoaji/labu/actions)
     [![image](./assets/labu_atweb1.png)](./assets/labu_atweb1.png)
     [![image](./assets/labu_atweb1.png)](./assets/labu_atweb1.png)
 - **`Postman Colletion x Newman [API AT]`** - Jambu API Test
