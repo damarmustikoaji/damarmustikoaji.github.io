@@ -1,8 +1,6 @@
-![image](https://media-exp2.licdn.com/dms/image/C5616AQENsTYZiHyLDQ/profile-displaybackgroundimage-shrink_200_800/0/1644221910284?e=1662595200&v=beta&t=YXX-Ikdw3FHH8HMxlyn49e4CM9_zdImrtnhQayJSatI)
+<img src="./assets/image3.png" width="200">
 
 Having more than 5 years of experience as a Quality Assurance Engineer. Dedicated to ensuring the quality of software products by testing products and solving problems. I have an interest in automation testing. A software tester, who likes to learn a new thing about technology to increase the testing ability skill.
-
-![image](https://media-exp1.licdn.com/dms/image/C4D03AQHC9y1yDBp_kg/profile-displayphoto-shrink_200_200/0/1618389462869?e=1658361600&v=beta&t=V97Nx7U4h-agCkD0gX9GZRk7yaKyQ9BxTF136OPDJ84)
 
 ### Experience
 
