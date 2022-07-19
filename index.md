@@ -4,7 +4,7 @@ Having more than 5 years of experience as a Quality Assurance Engineer. Dedicate
 
 ### Experience
 
-**November 2020 to now**
+*November 2020 to **now***
 
 **`Quality Assurance Specialist - SDET` <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/1200px-LinkAja.svg.png" width="20"> [LINKAJA](https://www.linkaja.id), Yogyakarta**
 > - Working in the squads to create
@@ -128,6 +128,8 @@ Scale:
     [![image](./assets/kelapa_postman_atapi.png)](./assets/kelapa_postman_atapi.png)
     [![image](./assets/kelapa_postman_atapi1.png)](./assets/kelapa_postman_atapi1.png)
     [![image](./assets/kelapa_postman_atapi2.png)](./assets/kelapa_postman_atapi2.png)
+- **`NodeJS WebdriverIO x Mocha [WEB AT]`** - Sharepoint Form Test
+  - Run [https://github.com/damarmustikoaji/leci/actions](https://github.com/damarmustikoaji/leci/actions)
 - For more detail check on [Repository](https://github.com/damarmustikoaji?tab=repositories)
 
 ### Contact
