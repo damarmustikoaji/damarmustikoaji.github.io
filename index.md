@@ -1,4 +1,4 @@
-<img src="https://media-exp1.licdn.com/dms/image/C4D03AQHC9y1yDBp_kg/profile-displayphoto-shrink_800_800/0/1618389462869?e=1669852800&v=beta&t=BlsInw0Tit7dA0IFj3JLlHS3uzohgBfnhKinxBpZz_g" width="200">
+<img src="https://workplaze-lib.dataon.com/cli7img/photo/linkaja/202507/e531dbcf3579c9c5b00ac87ec3dc3e75ba8f46f0_avatar_ori.jpeg" width="200">
 
 Having more than 5 years of experience as a Quality Assurance Engineer. Dedicated to ensuring the quality of software products by testing products and solving problems. I have an interest in automation testing. A software tester, who likes to learn a new thing about technology to increase the testing ability skill.
 
