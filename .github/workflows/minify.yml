@@ -1,0 +1,60 @@
+name: Minify & Deploy GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages   # ✅ tambahkan ini
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install minify tools
+        run: |
+          npm install -g clean-css-cli terser
+
+      - name: Minify CSS files
+        run: |
+          if [ -f css/styles.css ]; then
+            cleancss -o css/styles.min.css css/styles.css
+            mv css/styles.min.css css/styles.css
+          else
+            echo "No CSS file found to minify."
+          fi
+
+      - name: Minify JS files
+        run: |
+          if [ -f js/main.js ]; then
+            terser js/main.js -o js/main.min.js --compress --mangle
+            mv js/main.min.js js/main.js
+          else
+            echo "No JS file found to minify."
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

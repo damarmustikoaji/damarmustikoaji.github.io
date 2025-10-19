@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>damar</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+
+    <style>
+        /* Basic reset for list */
+        .s-about__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        /* Each experience row */
+        .experience-item .company {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Logo style (img or svg) */
+        .company-logo {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+            border-radius: 8px;
+            object-fit: cover;
+            display: inline-block;
+        }
+
+        /* Fallback logo (initials) */
+        .company-logo.fallback {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0e0e0;
+            color: #333;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Text block */
+        .company-meta {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        /* Name / role / period visuals */
+        .company-name {
+            color: #111;
+        }
+
+        .company-role {
+            color: #555;
+            margin-top: 3px;
+        }
+
+        .company-period {
+            color: #888;
+            margin-top: 2px;
+        }
+
+        /* Responsive: logo smaller on narrow screens */
+        @media (max-width: 480px) {
+            .company-logo {
+                width: 34px;
+                height: 34px;
+                flex: 0 0 34px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo.svg" alt="Homepage">
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
+                        <li><a class="smoothscroll" href="#about">About</a></li>
+                        <li><a class="smoothscroll" href="#portfolio">Portfolio</a></li>
+                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
+                    </ul> <!-- s-header__menu-links -->
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
+
+
+        <!-- # intro
+        ================================================== -->
+        <section id="intro" class="s-intro target-section">
+
+            <div class="row s-intro__content width-sixteen-col">
+                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+
+                    <div class="s-intro__content-text">
+
+                        <div class="s-intro__content-pretitle text-pretitle">Hello,</div>
+                        <h1 class="s-intro__content-title">
+                            I'm Damar Mustiko Aji <br>
+                            a Quality Engineer <br>
+                            based in Yogyakarta.
+                        </h1>
+
+                        <div class="s-intro__content-btns">
+                            <a class="smoothscroll btn" href="#about">More About Me</a>
+                            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
+                        </div> <!-- s-intro__content-btns -->
+
+                    </div> <!-- s-intro__content-text -->
+
+                </div> <!-- s-intro__content-inner -->
+            </div> <!-- s-intro__content -->
+
+            <ul class="s-intro__social social-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/damar-mustikoaji" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill:rgba(0, 0, 0, 1);">
+                            <path
+                                d="M4.98 3.5C4.98 4.604 4.084 5.5 2.98 5.5C1.876 5.5 0.98 4.604 0.98 3.5C0.98 2.396 1.876 1.5 2.98 1.5C4.084 1.5 4.98 2.396 4.98 3.5ZM.5 8.5H5.5V22H.5V8.5ZM8.5 8.5H13.3V10.3H13.36C13.96 9.3 15.22 8.2 17.26 8.2C21.14 8.2 22 10.7 22 14.4V22H17V15.3C17 13.7 16.96 11.7 14.86 11.7C12.72 11.7 12.4 13.4 12.4 15.2V22H7.4V8.5H8.5Z">
+                            </path>
+                        </svg>
+                        <span class="u-screen-reader-text">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/damarmustikoaji" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill:rgba(0, 0, 0, 1);">
+                            <path d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.302 3.438 9.8 8.205 11.387
+                    0.6 0.113 0.82-0.26 0.82-0.577 0-0.285-0.01-1.04-0.015-2.04
+                    -3.338 0.726-4.042-1.61-4.042-1.61-0.546-1.387-1.333-1.756-1.333-1.756
+                    -1.09-0.745 0.083-0.73 0.083-0.73 1.205 0.085 1.84 1.236 1.84 1.236
+                    1.07 1.835 2.807 1.305 3.492 0.998 0.107-0.776 0.42-1.305 0.763-1.605
+                    -2.665-0.305-5.466-1.333-5.466-5.931 0-1.31 0.469-2.381 1.236-3.221
+                    -0.124-0.303-0.536-1.523 0.117-3.176 0 0 1.008-0.322 3.301 1.23
+                    0.957-0.266 1.983-0.399 3.003-0.404 1.02 0.005 2.047 0.138 3.006 0.404
+                    2.291-1.552 3.297-1.23 3.297-1.23 0.655 1.653 0.243 2.873 0.119 3.176
+                    0.77 0.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.624-5.479 5.921
+                    0.431 0.372 0.816 1.102 0.816 2.222 0 1.604-0.015 2.896-0.015 3.286
+                    0 0.319 0.216 0.694 0.825 0.576C20.565 22.092 24 17.593 24 12.297
+                    24 5.67 18.627 0.297 12 0.297z">
+                            </path>
+                        </svg>
+                        <span class="u-screen-reader-text">GitHub</span>
+                    </a>
+                </li>
+            </ul> <!-- end s-intro__social -->
+
+            <div class="s-intro__content-media">
+                <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
+            </div> <!-- s-intro__content-media -->
+
+            <div class="s-intro__btn-download">
+                <a class="btn btn--stroke"
+                    href="https://ik.imagekit.io/wmqebf61j/damar-mustiko-aji-cv.pdf"
+                    download="Damar-Mustiko-Aji-CV.pdf">
+                    Get My CV
+                </a>
+            </div>
+
+
+            <div class="s-intro__scroll-down">
+                <a href="#about" class="smoothscroll">
+                    <div class="scroll-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            <path
+                                d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="scroll-text u-screen-reader-text">Scroll Down</span>
+                </a>
+            </div> <!-- s-intro__scroll-down -->
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- # about
+        ================================================== -->
+        <section id="about" class="s-about target-section">
+
+            <div class="row s-about__content">
+                <div class="column xl-12">
+
+                    <div class="section-header" data-num="01">
+                        <h2 class="text-display-title">About Me.</h2>
+                    </div> <!-- end section-header -->
+
+                    <p class="attention-getter">
+                        A passionate Quality Engineer and SDET who believes that great software deserves great testing.
+                        Over the past five years, I've worked on various projects — testing APIs, UIs, and end-to-end
+                        flows using tools like Postman, k6, and custom-built automation dashboards.
+                    </p>
+
+                    <p class="attention-getter">
+                        Beyond testing, I enjoy collaborating closely with developers, exploring performance metrics,
+                        and crafting smarter test strategies that make development faster and more reliable.
+                        My mission is simple: to ensure every release is stable, scalable, and ready to delight users.
+                    </p>
+
+                    <div class="grid-list-items s-about__blocks">
+
+                        <!-- Experience block -->
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Experience</h4>
+
+                            <ul class="s-about__list">
+                                <li class="experience-item">
+                                    <div class="company">
+                                        <img class="company-logo"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/2048px-LinkAja.svg.png"
+                                            alt="LinkAja logo" width="40" height="40">
+                                        <div class="company-meta">
+                                            <div class="company-name">LinkAja</div>
+                                            <div class="company-role">Quality Assurance Specialist - SDET</div>
+                                            <div class="company-period">November 2020 — Present</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="experience-item">
+                                    <div class="company">
+                                        <img class="company-logo"
+                                            src="https://media.licdn.com/dms/image/v2/C4D0BAQFE_7iIzXPkkw/company-logo_200_200/company-logo_200_200/0/1631329338026?e=2147483647&v=beta&t=lnGD36In6hYhOgr0J3SjuOjkg9IyX7jQh0-bUlw_L08"
+                                            alt="LinkAja logo" width="40" height="40">
+                                        <div class="company-meta">
+                                            <div class="company-name">Ralali.com</div>
+                                            <div class="company-role">Quality Engineer</div>
+                                            <div class="company-period">March 2019 — October 2020</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="experience-item">
+                                    <div class="company">
+                                        <img class="company-logo"
+                                            src="https://i.pinimg.com/280x280_RS/41/e9/3a/41e93ae927ba5d77c17d66eeea4a03a7.jpg"
+                                            alt="LinkAja logo" width="40" height="40">
+                                        <div class="company-meta">
+                                            <div class="company-name">MauKerja.id</div>
+                                            <div class="company-role">Quality Assurance Engineer</div>
+                                            <div class="company-period">September 2018 — February 2019</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="experience-item">
+                                    <div class="company">
+                                        <img class="company-logo"
+                                            src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/v1462701236/fj1gigt1p2thd90czx3z.png"
+                                            alt="LinkAja logo" width="40" height="40">
+                                        <div class="company-meta">
+                                            <div class="company-name">Wonderlabs</div>
+                                            <div class="company-role">Quality Assurance Engineer</div>
+                                            <div class="company-period">September 2017 — Augustus 2018</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="experience-item">
+                                    <div class="company">
+                                        <img class="company-logo"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT5vBFq0V3aDj5FiiOC2ilQ9sSEk6TddmdaA&s"
+                                            alt="LinkAja logo" width="40" height="40">
+                                        <div class="company-meta">
+                                            <div class="company-name">Sebangsa</div>
+                                            <div class="company-role">Quality Assurance Automation Specialist</div>
+                                            <div class="company-period">July 2017 — Augustus 2017</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Skills</h4>
+
+                            <ul class="s-about__list">
+                                <li>
+                                    Manual Testing: website, mobile apps (android, ios), API (backend)
+                                </li>
+                                <li>
+                                    Automation Testing: Website, API, Mobile apps (android)
+                                </li>
+                                <li>
+                                    Creating Test cases and Management
+                                </li>
+                                <li>
+                                    Basic Knowledge of query language (MySQL, Postgres)
+                                </li>
+                                <li>
+                                    Writing script tests using the programming language
+                                </li>
+                                <li>
+                                    Familiar and used to: git (GitHub, GitLab) activities, dashboard monitoring log
+                                    (grafana, datadog, kibana)
+                                </li>
+                            </ul>
+                        </div> <!--end s-about__block -->
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Tools & Programming Languages</h4>
+
+                            <ul class="s-about__list">
+                                <li>
+                                    <span>TestRails Management</span>
+                                </li>
+                                <li>
+                                    <span>Jira and Confluence (atlassian)</span>
+                                </li>
+                                <li>
+                                    <span>Postman, Apidog, Insomnia, Swagger</span>
+                                </li>
+                                <li>
+                                    <span>Table Plus</span>
+                                </li>
+                                <li>
+                                    <span>Visual Studio Code</span>
+                                </li>
+                                <li>
+                                    <span>CI/CD (GitHub Actions, GitLab CI/CD)</span>
+                                </li>
+                                <li>
+                                    <span>Grafana, Log SSH, Lens/Kubernetes</span>
+                                </li>
+                                <li>
+                                    <span>K6 (for Performance Test)</span>
+                                </li>
+                                <li>
+                                    <span>Playwright, Cypress, Mocha and Chai, Selenium, Appium, Robot Framework,
+                                        Katalon</span>
+                                </li>
+                                <li>
+                                    <span>Type Script, JavaScript, Python</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- grid-list-items -->
+
+                </div> <!--end column -->
+            </div> <!--end s-about__content -->
+
+        </section> <!-- end s-about -->
+
+
+
+        <!-- # works
+        ================================================== -->
+        <section id="portfolio" class="s-works target-section">
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">Portfolio.</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row folio-entries">
+                <div class="swiper-container s-testimonials__slider">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="s-testimonials__slide swiper-slide">
+                            <strong>EJS + Express + Playwright</strong>
+                            <span>- API Test Dashboard Generator</span>
+                            <p>
+                                Built a custom dashboard generator that automatically creates and executes API test
+                                scripts using Playwright.
+                            </p>
+                        </div> <!-- end s-testimonials__slide -->
+
+                        <div class="s-testimonials__slide swiper-slide">
+                            <strong>Mocha & Chai</strong>
+                            <span>- API Automation Testing</span>
+                            <p>
+                                Automated REST API validation focusing on response integrity and schema verification.
+                            </p>
+                        </div> <!-- end s-testimonials__slide -->
+
+                        <div class="s-testimonials__slide swiper-slide">
+                            <strong>Cypress + Cucumber</strong>
+                            <span>- Web Automation</span>
+                            <p>
+                                Implemented BDD-style web testing with Cypress and Gherkin syntax integration.
+                            </p>
+                        </div> <!-- end s-testimonials__slide -->
+
+                        <div class="s-testimonials__slide swiper-slide">
+                            <strong>Behave + Selenium WebDriver</strong>
+                            <span>- Web Automation</span>
+                            <p>
+                                Leveraged BDD testing with Python Behave for cross-browser validation scenarios.
+                            </p>
+                        </div> <!-- end s-testimonials__slide -->
+
+                        <div class="s-testimonials__slide swiper-slide">
+                            <strong>Robot Framework</strong>
+                            <span>- API Automation Testing</span>
+                            <p>
+                                Designed modular test cases for API endpoints using Robot Framework and data-driven
+                                design.
+                            </p>
+                        </div> <!-- end s-testimonials__slide -->
+
+                    </div> <!-- end swiper-wrapper -->
+
+                    <div class="swiper-pagination"></div>
+
+                </div> <!-- end swiper-container -->
+
+            </div> <!-- folio entries -->
+
+        </section> <!-- end s-works -->
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark" data-num="03">
+                        <h2 class="text-display-title">Get In Touch.</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">
+                    <p class="attention-getter">
+                        I'm always open to new opportunities, collaborations, or simply a good conversation about
+                        software quality and automation.
+                        If you'd like to connect or discuss potential projects, feel free to reach out — I'd be happy to
+                        hear from you.
+                    </p>
+                </div> <!-- end section-footer__about -->
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Follow Me</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.linkedin.com/in/damar-mustikoaji/">LinkedIn</a></li>
+                                <li><a href="https://github.com/damarmustikoaji">Github</a></li>
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contact Me</h5>
+                            <ul class="link-list">
+                                <li><a href="mailto:damar.mustikoaji@gmail.com">damar.mustikoaji@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end section-footer__site-links -->
+
+            </div> <!-- end section-footer__content -->
+
+
+            <div class="row s-footer__buttons">
+
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:damar.mustikoaji@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message
+                        Me</a>
+                </div>
+
+                <div class="column xl-6 tab-12">
+                    <a href="https://ik.imagekit.io/wmqebf61j/damar-mustiko-aji-cv.pdf" class="btn btn--stroke btn--large u-fullwidth" download="Damar-Mustiko-Aji-CV.pdf">Get My CV</a>
+                </div>
+
+            </div> <!-- end section-footer__buttons -->
+
+            <div class="row s-footer__bottom">
+
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright damar. <span id="current-year"></span></span>
+                    </p>
+                </div>
+
+                <!-- Tambahkan ini di bawah, sebelum </body> -->
+                <script>
+                    // ambil elemen dan set current year
+                    document.getElementById("current-year").textContent = new Date().getFullYear();
+                </script>
+
+
+            </div> <!-- end section-footer__bottom -->
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                        <path
+                            d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z">
+                        </path>
+                    </svg>
+                </a>
+                <span>Back To Top</span>
+            </div> <!-- end ss-go-top -->
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
