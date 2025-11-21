@@ -1,164 +1,394 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<head>
-
+  <head>
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>damar</title>
-
     <script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
     </script>
-
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
-
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-
-
     <style>
-        /* Basic reset for list */
-        .s-about__list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: 1rem;
-        }
+      /* Basic reset for list */
+      .s-about__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 1rem;
+      }
 
-        /* Each experience row */
-        .experience-item .company {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
+      /* Each experience row */
+      .experience-item .company {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
 
-        /* Logo style (img or svg) */
+      /* Logo style (img or svg) */
+      .company-logo {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        border-radius: 8px;
+        object-fit: cover;
+        display: inline-block;
+      }
+
+      /* Fallback logo (initials) */
+      .company-logo.fallback {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #e0e0e0;
+        color: #333;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+      }
+
+      /* Text block */
+      .company-meta {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
+
+      /* Name / role / period visuals */
+      .company-name {
+        color: #111;
+      }
+
+      .company-role {
+        color: #555;
+        margin-top: 3px;
+      }
+
+      .company-period {
+        color: #888;
+        margin-top: 2px;
+      }
+
+      /* Responsive: logo smaller on narrow screens */
+      @media (max-width: 480px) {
         .company-logo {
-            width: 40px;
-            height: 40px;
-            flex: 0 0 40px;
-            border-radius: 8px;
-            object-fit: cover;
-            display: inline-block;
+          width: 34px;
+          height: 34px;
+          flex: 0 0 34px;
+        }
+      }
+
+      .experience-loader {
+        display: flex;
+        gap: 6px;
+        margin: 10px 0 20px 0;
+      }
+
+      .loader-dot {
+        width: 8px;
+        height: 8px;
+        background: #999;
+        border-radius: 50%;
+        animation: dotPulse 1s infinite ease-in-out;
+      }
+
+      .loader-dot:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .loader-dot:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes dotPulse {
+        0% {
+          transform: scale(0.7);
+          opacity: 0.4;
         }
 
-        /* Fallback logo (initials) */
-        .company-logo.fallback {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #e0e0e0;
-            color: #333;
-            font-weight: 700;
-            font-size: 14px;
-            border-radius: 8px;
-            width: 40px;
-            height: 40px;
+        50% {
+          transform: scale(1);
+          opacity: 1;
         }
 
-        /* Text block */
-        .company-meta {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
+        100% {
+          transform: scale(0.7);
+          opacity: 0.4;
         }
-
-        /* Name / role / period visuals */
-        .company-name {
-            color: #111;
-        }
-
-        .company-role {
-            color: #555;
-            margin-top: 3px;
-        }
-
-        .company-period {
-            color: #888;
-            margin-top: 2px;
-        }
-
-        /* Responsive: logo smaller on narrow screens */
-        @media (max-width: 480px) {
-            .company-logo {
-                width: 34px;
-                height: 34px;
-                flex: 0 0 34px;
-            }
-        }
-
-        .experience-loader {
-            display: flex;
-            gap: 6px;
-            margin: 10px 0 20px 0;
-        }
-
-        .loader-dot {
-            width: 8px;
-            height: 8px;
-            background: #999;
-            border-radius: 50%;
-            animation: dotPulse 1s infinite ease-in-out;
-        }
-
-        .loader-dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .loader-dot:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes dotPulse {
-            0% {
-                transform: scale(0.7);
-                opacity: 0.4;
-            }
-
-            50% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(0.7);
-                opacity: 0.4;
-            }
-        }
+      }
     </style>
-
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<script>
-    // Ubah ini setiap kali URL Apps Script berubah
-    const GAS_BASE_URL = "https://script.google.com/macros/s/AKfycbzP6DMgpJO81Cgo9gHkOUrlH-QdQAX5Dgta87HmWmulHLjlKnJoIjfSNJysHFn2-eXEHA/exec";
-</script>
-
-
-<script>
-const ICONS = {
-    linkedin: `
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+  </head>
+  <body id="top">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header">
+        <div class="row s-header__inner">
+          <div class="s-header__block">
+            <div class="s-header__logo">
+              <a class="logo" href="index.html">
+                <img src="images/logo.svg" alt="Homepage">
+              </a>
+            </div>
+            <a class="s-header__menu-toggle" href="#0">
+              <span>Menu</span>
+            </a>
+          </div>
+          <!-- end s-header__block -->
+          <nav class="s-header__nav">
+            <ul class="s-header__menu-links">
+              <li class="current">
+                <a class="smoothscroll" href="#intro">Intro</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#about">About</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#footer">Contact</a>
+              </li>
+            </ul>
+            <!-- s-header__menu-links -->
+          </nav>
+          <!-- end s-header__nav -->
+        </div>
+        <!-- end s-header__inner -->
+      </header>
+      <!-- end s-header -->
+      <!-- # intro
+        ================================================== -->
+      <section id="intro" class="s-intro target-section">
+        <div class="row s-intro__content width-sixteen-col">
+          <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+            <div class="s-intro__content-text">
+              <div class="s-intro__content-pretitle text-pretitle" id="intro-pretitle">Hello,</div>
+              <h1 class="s-intro__content-title" id="intro-title"> Loading... </h1>
+              <div class="s-intro__content-btns">
+                <a class="smoothscroll btn" href="#about">More About Me</a>
+                <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
+              </div>
+              <!-- s-intro__content-btns -->
+            </div>
+            <!-- s-intro__content-text -->
+          </div>
+          <!-- s-intro__content-inner -->
+        </div>
+        <!-- s-intro__content -->
+        <ul class="s-intro__social social-list"></ul>
+        <div class="s-intro__content-media">
+          <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
+        </div>
+        <!-- s-intro__content-media -->
+        <div class="s-intro__btn-download">
+          <a class="btn btn--stroke" href="https://ik.imagekit.io/wmqebf61j/damar-mustiko-aji-cv.pdf" download="Damar-Mustiko-Aji-CV.pdf"> Get My CV </a>
+        </div>
+        <div class="s-intro__scroll-down">
+          <a href="#about" class="smoothscroll">
+            <div class="scroll-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+              </svg>
+            </div>
+            <span class="scroll-text u-screen-reader-text">Scroll Down</span>
+          </a>
+        </div>
+        <!-- s-intro__scroll-down -->
+      </section>
+      <!-- end s-intro -->
+      <!-- # about
+        ================================================== -->
+      <section id="about" class="s-about target-section">
+        <div class="row s-about__content">
+          <div class="column xl-12">
+            <div class="section-header" data-num="01">
+              <h2 class="text-display-title">About Me.</h2>
+            </div>
+            <!-- end section-header -->
+            <div id="summary-container">
+              <p class="attention-getter">Loading...</p>
+            </div>
+            <div class="grid-list-items s-about__blocks">
+              <!-- Experience block -->
+              <div class="grid-list-items__item s-about__block">
+                <h4 class="s-about__block-title">Experiences</h4>
+                <!-- Loader -->
+                <div id="experience-loader" class="experience-loader">
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                </div>
+                <ul class="s-about__list" id="experience-list"></ul>
+              </div>
+              <div class="grid-list-items__item s-about__block">
+                <h4 class="s-about__block-title">Skills</h4>
+                <!-- Loader -->
+                <div id="skills-loader" class="experience-loader">
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                </div>
+                <ul class="s-about__list" id="skills-list"></ul>
+              </div>
+              <!--end s-about__block -->
+              <div class="grid-list-items__item s-about__block">
+                <h4 class="s-about__block-title">Tools & Programming</h4>
+                <!-- Loader -->
+                <div id="tools-loader" class="experience-loader">
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                </div>
+                <ul class="s-about__list" id="tools-list"></ul>
+              </div>
+            </div>
+            <!-- grid-list-items -->
+          </div>
+          <!--end column -->
+        </div>
+        <!--end s-about__content -->
+      </section>
+      <!-- end s-about -->
+      <!-- # works
+        ================================================== -->
+      <section id="portfolio" class="s-works target-section">
+        <div class="row">
+          <div class="column xl-12">
+            <div class="section-header" data-num="02">
+              <h2 class="text-display-title">Portfolio.</h2>
+            </div>
+            <!-- end section-header -->
+          </div>
+        </div>
+        <div class="row folio-entries">
+          <div class="swiper-container s-testimonials__slider">
+            <div class="swiper-wrapper" id="portfolio-wrapper"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- end swiper-container -->
+        </div>
+        <!-- folio entries -->
+      </section>
+      <!-- end s-works -->
+      <!-- # footer 
+        ================================================== -->
+      <footer id="footer" class="s-footer target-section">
+        <div class="row">
+          <div class="column lg-12">
+            <div class="section-header light-on-dark" data-num="03">
+              <h2 class="text-display-title">Get In Touch.</h2>
+            </div>
+            <!-- end section-header -->
+          </div>
+        </div>
+        <div class="row s-footer__content">
+          <div class="column xl-6 md-12 s-footer__block s-footer__about">
+            <p id="getInTouch" class="attention-getter">
+              <!-- Akan diisi dari API --> Loading...
+            </p>
+          </div>
+          <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+            <div class="row">
+              <div class="column xl-4 lg-5 md-6 tab-12">
+                <!-- <h5>Follow Me</h5> -->
+                <!-- <ul class="link-list"></ul> -->
+              </div>
+              <div class="column xl-6 md-6 tab-12">
+                <h5>Contact Me</h5>
+                <ul class="link-list">Loading...</ul>
+              </div>
+            </div>
+          </div>
+          <!-- end section-footer__site-links -->
+        </div>
+        <!-- end section-footer__content -->
+        <div class="row s-footer__buttons">
+          <div class="column xl-6 tab-12">
+            <a class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+          </div>
+          <div class="column xl-6 tab-12">
+            <a href="https://ik.imagekit.io/wmqebf61j/damar-mustiko-aji-cv.pdf" class="btn btn--stroke btn--large u-fullwidth" download="Damar-Mustiko-Aji-CV.pdf">Get My CV</a>
+          </div>
+        </div>
+        <!-- end section-footer__buttons -->
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>© Copyright damar ~ somm.my.id <span id="current-year"></span>
+              </span>
+            </p>
+          </div>
+          <!-- Tambahkan ini di bawah, sebelum </body> -->
+          <script>
+            // ambil elemen dan set current year
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+          </script>
+        </div>
+        <!-- end section-footer__bottom -->
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>
+            </svg>
+          </a>
+          <span>Back To Top</span>
+        </div>
+        <!-- end ss-go-top -->
+      </footer>
+      <!-- end s-footer -->
+    </div>
+    <!-- end page-wrap -->
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const GAS_BASE_URL = "https://script.google.com/macros/s/AKfycby9uHcbBhrlgkUQL-rraOaPEIi1lHpR--NtojotEH5ZRp2KuXTa6FxD_HN94WWdsI_8-w/exec";
+      const ICONS = {
+        linkedin: `
+        
+													
+													<svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             viewBox="0 0 24 24" style="fill:rgba(0,0,0,1);">
-            <path d="M4.98 3.5C4.98 4.604 4.084 5.5 2.98 5.5C1.876 5.5 0.98 4.604 0.98 3.5C0.98 2.396 1.876 1.5 2.98 1.5C4.084 1.5 4.98 2.396 4.98 3.5ZM.5 8.5H5.5V22H.5V8.5ZM8.5 8.5H13.3V10.3H13.36C13.96 9.3 15.22 8.2 17.26 8.2C21.14 8.2 22 10.7 22 14.4V22H17V15.3C17 13.7 16.96 11.7 14.86 11.7C12.72 11.7 12.4 13.4 12.4 15.2V22H7.4V8.5H8.5Z"></path>
-        </svg>
+														<path d="M4.98 3.5C4.98 4.604 4.084 5.5 2.98 5.5C1.876 5.5 0.98 4.604 0.98 3.5C0.98 2.396 1.876 1.5 2.98 1.5C4.084 1.5 4.98 2.396 4.98 3.5ZM.5 8.5H5.5V22H.5V8.5ZM8.5 8.5H13.3V10.3H13.36C13.96 9.3 15.22 8.2 17.26 8.2C21.14 8.2 22 10.7 22 14.4V22H17V15.3C17 13.7 16.96 11.7 14.86 11.7C12.72 11.7 12.4 13.4 12.4 15.2V22H7.4V8.5H8.5Z"></path>
+													</svg>
     `,
-    github: `
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        github: `
+        
+													
+													<svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             viewBox="0 0 24 24" style="fill:rgba(0,0,0,1);">
-            <path d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.302 3.438 9.8 8.205 11.387
+														<path d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.302 3.438 9.8 8.205 11.387
                     0.6 0.113 0.82-0.26 0.82-0.577 0-0.285-0.01-1.04-0.015-2.04
                     -3.338 0.726-4.042-1.61-4.042-1.61-0.546-1.387-1.333-1.756-1.333-1.756
                     -1.09-0.745 0.083-0.73 0.083-0.73 1.205 0.085 1.84 1.236 1.84 1.236
@@ -171,633 +401,171 @@ const ICONS = {
                     0.431 0.372 0.816 1.102 0.816 2.222 0 1.604-0.015 2.896-0.015 3.286
                     0 0.319 0.216 0.694 0.825 0.576C20.565 22.092 24 17.593 24 12.297
                     24 5.67 18.627 0.297 12 0.297z"></path>
-        </svg>
+													</svg>
     `,
-    email: `
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        email: `
+        
+													
+													<svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             viewBox="0 0 24 24" style="fill:rgba(0,0,0,1);">
-            <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"></path>
-        </svg>
+														<path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"></path>
+													</svg>
     `
-};
-</script>
-
-</head>
-
-
-<body id="top">
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-
-
-    <!-- page wrap
-    ================================================== -->
-    <div id="page" class="s-pagewrap">
-
-
-        <!-- # site header 
-        ================================================== -->
-        <header class="s-header">
-            <div class="row s-header__inner">
-
-                <div class="s-header__block">
-                    <div class="s-header__logo">
-                        <a class="logo" href="index.html">
-                            <img src="images/logo.svg" alt="Homepage">
-                        </a>
-                    </div>
-
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-                </div> <!-- end s-header__block -->
-
-                <nav class="s-header__nav">
-                    <ul class="s-header__menu-links">
-                        <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-                        <li><a class="smoothscroll" href="#about">About</a></li>
-                        <li><a class="smoothscroll" href="#portfolio">Portfolio</a></li>
-                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
-                    </ul> <!-- s-header__menu-links -->
-                </nav> <!-- end s-header__nav -->
-
-            </div> <!-- end s-header__inner -->
-        </header> <!-- end s-header -->
-
-
-        <!-- # intro
-        ================================================== -->
-        <section id="intro" class="s-intro target-section">
-
-            <div class="row s-intro__content width-sixteen-col">
-                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
-
-                    <div class="s-intro__content-text">
-
-<div class="s-intro__content-pretitle text-pretitle" id="intro-pretitle">Hello,</div>
-
-<h1 class="s-intro__content-title" id="intro-title">
-    Loading...
-</h1>
-<script>
-async function loadIntro() {
-    const url = `${GAS_BASE_URL}?sheet=summary&id=1`;
-
-    const pretitle = document.getElementById("intro-pretitle");
-    const title = document.getElementById("intro-title");
-
-    // Optional: loader state
-    title.innerHTML = "Loading...";
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        // Pastikan value ada
-        if (!data || !data.value) {
-            title.innerHTML = "Failed to load intro.";
-            return;
-        }
-
-        // Set content (biarkan HTML <br> dari sheet tetap bekerja)
-        title.innerHTML = data.value;
-
-        // Kalau mau pre-title dari sheet juga
-        // pretitle.textContent = data.pretitle ?? "Hello,";
-
-    } catch (error) {
-        console.error("Error loading intro:", error);
-        title.innerHTML = "Failed to load intro.";
-    }
-}
-
-loadIntro();
-</script>
-
-
-                        <div class="s-intro__content-btns">
-                            <a class="smoothscroll btn" href="#about">More About Me</a>
-                            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
-                        </div> <!-- s-intro__content-btns -->
-
-                    </div> <!-- s-intro__content-text -->
-
-                </div> <!-- s-intro__content-inner -->
-            </div> <!-- s-intro__content -->
-
-            <ul class="s-intro__social social-list"></ul>
-
-            <div class="s-intro__content-media">
-                <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
-            </div> <!-- s-intro__content-media -->
-
-            <div class="s-intro__btn-download">
-                <a class="btn btn--stroke" href="https://ik.imagekit.io/wmqebf61j/damar-mustiko-aji-cv.pdf"
-                    download="Damar-Mustiko-Aji-CV.pdf">
-                    Get My CV
-                </a>
-            </div>
-
-
-            <div class="s-intro__scroll-down">
-                <a href="#about" class="smoothscroll">
-                    <div class="scroll-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-                            <path
-                                d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z">
-                            </path>
-                        </svg>
-                    </div>
-                    <span class="scroll-text u-screen-reader-text">Scroll Down</span>
-                </a>
-            </div> <!-- s-intro__scroll-down -->
-
-        </section> <!-- end s-intro -->
-
-
-        <!-- # about
-        ================================================== -->
-        <section id="about" class="s-about target-section">
-
-            <div class="row s-about__content">
-                <div class="column xl-12">
-
-                    <div class="section-header" data-num="01">
-                        <h2 class="text-display-title">About Me.</h2>
-                    </div> <!-- end section-header -->
-
-<div id="summary-container">
-    <p class="attention-getter">Loading...</p>
-</div>
-<script>
-async function loadSummary() {
-    const url = `${GAS_BASE_URL}?sheet=summary&id=2`;
-
-    const container = document.getElementById("summary-container");
-    container.innerHTML = `<p class="attention-getter">Loading...</p>`;
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if (!data || !data.value) {
-            container.innerHTML = `<p class="attention-getter">Failed to load summary.</p>`;
-            return;
-        }
-
-        // Pecah value jadi paragraf berdasarkan double-newline
-        const paragraphs = data.value.split(/\n\s*\n/);
-
-        // Generate HTML paragraf
-        container.innerHTML = paragraphs
-            .map(p => `<p class="attention-getter">${p}</p>`)
-            .join("");
-
-    } catch (error) {
-        console.error("Error loading summary:", error);
-        container.innerHTML = `<p class="attention-getter">Failed to load summary.</p>`;
-    }
-}
-
-loadSummary();
-</script>
-
-
-                    <div class="grid-list-items s-about__blocks">
-
-                        <!-- Experience block -->
-                        <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Experiences</h4>
-
-                            <!-- Loader -->
-                            <div id="experience-loader" class="experience-loader">
-                                <div class="loader-dot"></div>
-                                <div class="loader-dot"></div>
-                                <div class="loader-dot"></div>
-                            </div>
-
-                            <ul class="s-about__list" id="experience-list"></ul>
-                        </div>
-
-<script>
-async function loadExperiences() {
-    const url = `${GAS_BASE_URL}?sheet=experiences`;
-
-    const list = document.getElementById("experience-list");
-    const loader = document.getElementById("experience-loader");
-
-    // Tampilkan loader
-    loader.style.display = "flex";
-    list.innerHTML = "";
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        // Sembunyikan loader setelah data diterima
-        loader.style.display = "none";
-
-        data.forEach(item => {
-            const logoHTML = item.logo
-                ? `<img class="company-logo" src="${item.logo}" alt="${item.company}">`
-                : `<div class="company-logo fallback">${item.company.substring(0, 2).toUpperCase()}</div>`;
-
-            const li = `
-                <li class="experience-item">
-                    <div class="company">
+      };
+      async function loadAll() {
+        try {
+          const response = await fetch(`${GAS_BASE_URL}?all=true`);
+          const data = await response.json();
+          // -----------------------------
+          // INTRO
+          // -----------------------------
+          document.getElementById("intro-title").innerHTML = data.intro;
+          const experienceloader = document.getElementById("experience-loader");
+          const toolsloader = document.getElementById("tools-loader");
+          const skillsloader = document.getElementById("skills-loader");
+          experienceloader.style.display = "none";
+          toolsloader.style.display = "none";
+          skillsloader.style.display = "none";
+          // -----------------------------
+          // SUMMARY
+          // -----------------------------
+          const summaryParagraphs = data.summary.split(/\n\s*\n/).map(p => `
+													
+													<p class="attention-getter">${p}</p>`).join("");
+          document.getElementById("summary-container").innerHTML = summaryParagraphs;
+          // -----------------------------
+          // SET CV URL FROM API
+          // -----------------------------
+          if (data.cvfiles && data.cvfiles.length > 0) {
+            const cvUrl = data.cvfiles[0].url;
+            // tombol CV di intro
+            const introCvBtn = document.querySelector(".s-intro__btn-download a");
+            introCvBtn.href = cvUrl;
+            // tombol CV di footer
+            const footerCvBtn = document.querySelector(".s-footer__buttons a.btn--stroke");
+            footerCvBtn.href = cvUrl;
+            // nama file optional
+            introCvBtn.setAttribute("download", "Damar-Mustiko-Aji-CV.pdf");
+            footerCvBtn.setAttribute("download", "Damar-Mustiko-Aji-CV.pdf");
+          }
+          // -----------------------------
+          // GET IN TOUCH
+          // -----------------------------
+          document.getElementById("getInTouch").innerHTML = data.getInTouch.replace(/\n/g, " < br > ");
+          // -----------------------------
+          // EXPERIENCES
+          // -----------------------------
+          const expList = document.getElementById("experience-list");
+          expList.innerHTML = "";
+          data.experiences.forEach(item => {
+            const logoHTML = item.logo ? `
+														
+													<img class="company-logo" src="${item.logo}" alt="${item.company}">` : `
+															
+														<div class="company-logo fallback">${item.company.substring(0,2).toUpperCase()}</div>`;
+            const html = `
+                
+															
+														<li class="experience-item">
+															<div class="company">
                         ${logoHTML}
-                        <div class="company-meta">
-                            <div class="company-name">${item.company}</div>
-                            <div class="company-role">${item.role}</div>
-                            <div class="company-period">${item.period}</div>
-                        </div>
-                    </div>
-                </li>
+                        
+																	
+																<div class="company-meta">
+																	<div class="company-name">${item.company}</div>
+																	<div class="company-role">${item.role}</div>
+																	<div class="company-period">${item.period}</div>
+																</div>
+															</div>
+														</li>
             `;
-            list.insertAdjacentHTML("beforeend", li);
-        });
-
-    } catch (error) {
-        console.error("Error loading experiences:", error);
-
-        loader.style.display = "none";
-        list.innerHTML = `<li>Failed to load data.</li>`;
-    }
-}
-
-loadExperiences();
-</script>
-
-<div class="grid-list-items__item s-about__block">
-    <h4 class="s-about__block-title">Skills</h4>
-
-    <!-- Loader -->
-    <div id="skills-loader" class="experience-loader">
-        <div class="loader-dot"></div>
-        <div class="loader-dot"></div>
-        <div class="loader-dot"></div>
-    </div>
-
-    <ul class="s-about__list" id="skills-list"></ul>
-</div>
- <!--end s-about__block -->
- <script>
-async function loadSkills() {
-    const url = `${GAS_BASE_URL}?sheet=skills`;
-
-    const list = document.getElementById("skills-list");
-    const loader = document.getElementById("skills-loader");
-
-    loader.style.display = "flex";
-    list.innerHTML = "";
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        loader.style.display = "none";
-
-        data.forEach(item => {
-            const li = `
-                <li>${item.value}</li>
-            `;
-            list.insertAdjacentHTML("beforeend", li);
-        });
-
-    } catch (error) {
-        console.error("Error loading skills:", error);
-
-        loader.style.display = "none";
-        list.innerHTML = `<li>Failed to load data.</li>`;
-    }
-}
-
-loadSkills();
-</script>
-
-<div class="grid-list-items__item s-about__block">
-    <h4 class="s-about__block-title">Tools & Programming</h4>
-
-    <!-- Loader -->
-    <div id="tools-loader" class="experience-loader">
-        <div class="loader-dot"></div>
-        <div class="loader-dot"></div>
-        <div class="loader-dot"></div>
-    </div>
-
-    <ul class="s-about__list" id="tools-list"></ul>
-</div>
-<script>
-async function loadTools() {
-    const url = `${GAS_BASE_URL}?sheet=tools`;
-
-    const list = document.getElementById("tools-list");
-    const loader = document.getElementById("tools-loader");
-
-    loader.style.display = "flex";
-    list.innerHTML = "";
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        loader.style.display = "none";
-
-        data.forEach(item => {
-            const li = `
-                <li>${item.value}</li>
-            `;
-            list.insertAdjacentHTML("beforeend", li);
-        });
-
-    } catch (error) {
-        console.error("Error loading tools:", error);
-        loader.style.display = "none";
-        list.innerHTML = `<li>Failed to load data.</li>`;
-    }
-}
-
-loadTools();
-</script>
-
-
-                    </div> <!-- grid-list-items -->
-
-                </div> <!--end column -->
-            </div> <!--end s-about__content -->
-
-        </section> <!-- end s-about -->
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 4500,      // jeda 3.5 detik tiap slide
-            disableOnInteraction: false
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        speed: 6000,
-    });
-});
-</script>
-
-
-        <!-- # works
-        ================================================== -->
-        <section id="portfolio" class="s-works target-section">
-
-            <div class="row">
-                <div class="column xl-12">
-                    <div class="section-header" data-num="02">
-                        <h2 class="text-display-title">Portfolio.</h2>
-                    </div> <!-- end section-header -->
-                </div>
-            </div>
-
-            <div class="row folio-entries">
-                <div class="swiper-container s-testimonials__slider">
-
-                    <div class="swiper-wrapper">
-
-                        <div class="s-testimonials__slide swiper-slide">
-                            <strong>EJS + Express + Playwright</strong>
-                            <span>- API Test Dashboard Generator</span>
-                            <p>
-                                Built a custom dashboard generator that automatically creates and executes API test
-                                scripts using Playwright.
-                            </p>
-                        </div> <!-- end s-testimonials__slide -->
-
-                        <div class="s-testimonials__slide swiper-slide">
-                            <strong>Mocha & Chai</strong>
-                            <span>- API Automation Testing</span>
-                            <p>
-                                Automated REST API validation focusing on response integrity and schema verification.
-                            </p>
-                        </div> <!-- end s-testimonials__slide -->
-
-                        <div class="s-testimonials__slide swiper-slide">
-                            <strong>Cypress + Cucumber</strong>
-                            <span>- Web Automation</span>
-                            <p>
-                                Implemented BDD-style web testing with Cypress and Gherkin syntax integration.
-                            </p>
-                        </div> <!-- end s-testimonials__slide -->
-
-                        <div class="s-testimonials__slide swiper-slide">
-                            <strong>Behave + Selenium WebDriver</strong>
-                            <span>- Web Automation</span>
-                            <p>
-                                Leveraged BDD testing with Python Behave for cross-browser validation scenarios.
-                            </p>
-                        </div> <!-- end s-testimonials__slide -->
-
-                        <div class="s-testimonials__slide swiper-slide">
-                            <strong>Robot Framework</strong>
-                            <span>- API Automation Testing</span>
-                            <p>
-                                Designed modular test cases for API endpoints using Robot Framework and data-driven
-                                design.
-                            </p>
-                        </div> <!-- end s-testimonials__slide -->
-
-                    </div> <!-- end swiper-wrapper -->
-
-                    <div class="swiper-pagination"></div>
-
-                </div> <!-- end swiper-container -->
-
-            </div> <!-- folio entries -->
-
-        </section> <!-- end s-works -->
-
-        <!-- # footer 
-        ================================================== -->
-        <footer id="footer" class="s-footer target-section">
-
-            <div class="row">
-                <div class="column lg-12">
-                    <div class="section-header light-on-dark" data-num="03">
-                        <h2 class="text-display-title">Get In Touch.</h2>
-                    </div> <!-- end section-header -->
-                </div>
-            </div>
-
-            <div class="row s-footer__content">
-
-<div class="column xl-6 md-12 s-footer__block s-footer__about">
-    <p id="getInTouch" class="attention-getter">
-        <!-- Akan diisi dari API -->
-    </p>
-</div>
-<script>
-    async function loadGetInTouch() {
-    try {
-        const response = await fetch(
-            `${GAS_BASE_URL}?sheet=summary&id=3`
-        );
-
-        const data = await response.json();
-
-        // Mengambil elemen target
-        const element = document.getElementById("getInTouch");
-
-        // Replace \n\n menjadi <br><br> untuk paragraph break
-        const formattedText = data.value.replace(/\n/g, "<br>");
-
-        // Masukkan ke HTML
-        element.innerHTML = formattedText;
-
-    } catch (error) {
-        console.error("Error loading GetInTouch:", error);
-    }
-}
-
-// Panggil fungsi
-loadGetInTouch();
-
-</script>
-
-                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
-                    <div class="row">
-                        <div class="column xl-4 lg-5 md-6 tab-12">
-                            <h5>Follow Me</h5>
-                            <ul class="link-list"></ul>
-                        </div>
-                        <div class="column xl-6 md-6 tab-12">
-                            <h5>Contact Me</h5>
-                            <ul class="link-list"></ul>
-                        </div>
-                    </div>
-                </div> <!-- end section-footer__site-links -->
-
-            </div> <!-- end section-footer__content -->
-
-
-            <div class="row s-footer__buttons">
-
-                <div class="column xl-6 tab-12">
-                    <a class="btn btn--primary btn--large u-fullwidth">Message Me</a>
-                </div>
-
-                <div class="column xl-6 tab-12">
-                    <a href="https://ik.imagekit.io/wmqebf61j/damar-mustiko-aji-cv.pdf"
-                        class="btn btn--stroke btn--large u-fullwidth" download="Damar-Mustiko-Aji-CV.pdf">Get My CV</a>
-                </div>
-
-            </div> <!-- end section-footer__buttons -->
-
-            <div class="row s-footer__bottom">
-
-                <div class="column xl-6 lg-12">
-                    <p class="ss-copyright">
-                        <span>© Copyright damar. <span id="current-year"></span></span>
-                    </p>
-                </div>
-
-                <!-- Tambahkan ini di bawah, sebelum </body> -->
-                <script>
-                    // ambil elemen dan set current year
-                    document.getElementById("current-year").textContent = new Date().getFullYear();
-                </script>
-
-
-            </div> <!-- end section-footer__bottom -->
-
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-                        <path
-                            d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z">
-                        </path>
-                    </svg>
-                </a>
-                <span>Back To Top</span>
-            </div> <!-- end ss-go-top -->
-
-        </footer> <!-- end s-footer -->
-
-    </div> <!-- end page-wrap -->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-async function loadContacts() {
-    const url = `${GAS_BASE_URL}?sheet=contacts`;
-    
-    try {
-        const response = await fetch(url);
-        const contacts = await response.json();
-
-        // DOM TARGETS -------------------------------
-        const introSocial = document.querySelector(".s-intro__social");
-        const footerFollow = document.querySelector(".s-footer__site-links .link-list");
-        const footerEmailList = document.querySelector(".s-footer__site-links .column:nth-child(2) .link-list");
-        const messageMeBtn = document.querySelector(".s-footer__buttons a.btn--primary");
-
-        // CLEAR existing elements -------------------
-        introSocial.innerHTML = "";
-        footerFollow.innerHTML = "";
-        footerEmailList.innerHTML = "";
-
-        contacts.forEach(contact => {
-            const name = contact.name.toLowerCase();
-
-            // --- INTRO SOCIAL ICONS -----------------------
-            const iconHTML = ICONS[name] || ""; // fallback no icon
-            const introItem = `
-                <li>
-                    <a href="${contact.link}" target="_blank" rel="noopener">
-                        ${iconHTML}
-                        <span class="u-screen-reader-text">${contact.value}</span>
-                    </a>
-                </li>
-            `;
-            introSocial.insertAdjacentHTML("beforeend", introItem);
-
-            // --- FOOTER FOLLOW ME --------------------------
-            if (name !== "email") {
-                const li = `<li><a href="${contact.link}" target="_blank">${contact.value}</a></li>`;
-                footerFollow.insertAdjacentHTML("beforeend", li);
-            }
-
-            // --- FOOTER CONTACT EMAIL -----------------------
-            if (name === "email") {
-                const li = `<li><a href="${contact.link}">${contact.value}</a></li>`;
-                footerEmailList.insertAdjacentHTML("beforeend", li);
-
-                // Update "Message Me" button
-                messageMeBtn.href = contact.link;
-            }
-        });
-
-    } catch (err) {
-        console.error("Error loading contacts:", err);
-    }
-}
-
-loadContacts();
-</script>
-
-
-</body>
-
+            expList.insertAdjacentHTML("beforeend", html);
+          });
+          // -----------------------------
+          // SKILLS
+          // -----------------------------
+          document.getElementById("skills-list").innerHTML = data.skills.map(s => `
+															
+														<li>${s.value}</li>`).join("");
+          // -----------------------------
+          // TOOLS
+          // -----------------------------
+          document.getElementById("tools-list").innerHTML = data.tools.map(s => `
+															
+														<li>${s.value}</li>`).join("");
+          // -----------------------------
+          // CONTACTS (Intro icons + footer list + Message Me)
+          // -----------------------------
+          const introSocial = document.querySelector(".s-intro__social");
+          const footerEmailList = document.querySelector(".s-footer__site-links .column:nth-child(2) .link-list");
+          const messageMeBtn = document.querySelector(".s-footer__buttons a.btn--primary");
+          introSocial.innerHTML = "";
+          footerEmailList.innerHTML = "";
+          data.contacts.forEach(c => {
+            const lower = c.name.toLowerCase();
+            introSocial.insertAdjacentHTML("beforeend", `
+                
+															
+														<li>
+															<a href="${c.link}" target="_blank">
+                        ${ICONS[lower] || ""}
+                        
+																	
+																<span class="u-screen-reader-text">${c.value}</span>
+															</a>
+														</li>
+            `);
+            footerEmailList.insertAdjacentHTML("beforeend", `
+                
+															
+														<li>
+															<a href="${c.link}">${c.value}</a>
+														</li>
+            `);
+            messageMeBtn.href = c.link;
+          });
+        } catch (err) {
+          console.error("Error loadAll():", err);
+        }
+      }
+      async function loadPortfolio() {
+        try {
+          const response = await fetch(`${GAS_BASE_URL}?sheet=portfolios`);
+          const portfolios = await response.json();
+          const wrapper = document.getElementById("portfolio-wrapper");
+          wrapper.innerHTML = ""; // clear
+          portfolios.forEach(item => {
+            wrapper.insertAdjacentHTML("beforeend", `
+                
+															
+														<div class="s-testimonials__slide swiper-slide">
+															<strong>${item.tags}</strong>
+															<span>- ${item.title}</span>
+															<p>${item.description}</p>
+														</div>
+            `);
+          });
+          // Reinitialize swiper after dynamic insert
+          new Swiper('.swiper-container', {
+            loop: portfolios.length > 2,
+            autoplay: {
+              delay: 4500,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            speed: 6000,
+          });
+        } catch (err) {
+          console.error("Error loading portfolio:", err);
+        }
+      }
+      // Jalankan hanya 1 kali
+      loadAll();
+      loadPortfolio();
+    </script>
+  </body>
 </html>
