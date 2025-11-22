@@ -14,6 +14,7 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -170,6 +171,12 @@
                 <a class="smoothscroll" href="#about">About</a>
               </li>
               <li>
+                <a class="smoothscroll" href="#skills-tech">Skills</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#work-history">Experience</a>
+              </li>
+              <li>
                 <a class="smoothscroll" href="#portfolio">Portfolio</a>
               </li>
               <li>
@@ -233,41 +240,7 @@
             </div>
             <!-- end section-header -->
             <div id="summary-container">
-              <p class="attention-getter">Loading...</p>
-            </div>
-            <div class="grid-list-items s-about__blocks">
-              <!-- Experience block -->
-              <div class="grid-list-items__item s-about__block">
-                <h4 class="s-about__block-title">Experiences</h4>
-                <!-- Loader -->
-                <div id="experience-loader" class="experience-loader">
-                  <div class="loader-dot"></div>
-                  <div class="loader-dot"></div>
-                  <div class="loader-dot"></div>
-                </div>
-                <ul class="s-about__list" id="experience-list"></ul>
-              </div>
-              <div class="grid-list-items__item s-about__block">
-                <h4 class="s-about__block-title">Skills</h4>
-                <!-- Loader -->
-                <div id="skills-loader" class="experience-loader">
-                  <div class="loader-dot"></div>
-                  <div class="loader-dot"></div>
-                  <div class="loader-dot"></div>
-                </div>
-                <ul class="s-about__list" id="skills-list"></ul>
-              </div>
-              <!--end s-about__block -->
-              <div class="grid-list-items__item s-about__block">
-                <h4 class="s-about__block-title">Tools & Technologies</h4>
-                <!-- Loader -->
-                <div id="tools-loader" class="experience-loader">
-                  <div class="loader-dot"></div>
-                  <div class="loader-dot"></div>
-                  <div class="loader-dot"></div>
-                </div>
-                <ul class="s-about__list" id="tools-list"></ul>
-              </div>
+              <p class="attention-getter"></p>
             </div>
             <!-- grid-list-items -->
           </div>
@@ -276,25 +249,70 @@
         <!--end s-about__content -->
       </section>
       <!-- end s-about -->
+      <!-- =========================================================
+     SKILLS & TECH STACK SECTION — CLEAN MODERN STYLE
+========================================================= -->
+      <section id="skills-tech" class="s-skills target-section">
+        <div class="row">
+          <div class="column xl-12">
+            <div class="section-header" data-num="02">
+              <h2 class="text-display-title">Skills & Tech Stack.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row s-skills__content">
+          <div class="column xl-10 lg-12">
+            <!-- Skills -->
+            <div class="skills-group">
+              <h4 class="skills-title">Skills</h4>
+              <div class="skills-list" id="skills-pill-list">
+                <!-- AUTO FROM API -->
+              </div>
+            </div>
+            <!-- Tech Stack -->
+            <div class="skills-group">
+              <h4 class="skills-title">Tools & Technologies</h4>
+              <div class="skills-list" id="tech-pill-list">
+                <!-- AUTO FROM API -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =============================================
+     WORK HISTORY SECTION
+================================================= -->
+      <section id="work-history" class="target-section">
+        <div class="row">
+          <div class="column xl-12">
+            <div class="section-header" data-num="03">
+              <h2 class="text-display-title">Experience.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column xl-10 lg-12">
+            <div class="timeline">
+              <!-- ITEM 1 -->
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- # works
         ================================================== -->
       <section id="portfolio" class="s-works target-section">
         <div class="row">
           <div class="column xl-12">
-            <div class="section-header" data-num="02">
+            <div class="section-header" data-num="04">
               <h2 class="text-display-title">Portfolio.</h2>
             </div>
-            <!-- end section-header -->
           </div>
         </div>
-        <div class="row folio-entries">
-          <div class="swiper-container s-testimonials__slider">
-            <div class="swiper-wrapper" id="portfolio-wrapper"></div>
-            <div class="swiper-pagination"></div>
+        <div class="row">
+          <div class="portfolio-grid" id="portfolio-wrapper">
+            <!-- ITEM AKAN DIISI AUTOMATIS OLEH API -->
           </div>
-          <!-- end swiper-container -->
         </div>
-        <!-- folio entries -->
       </section>
       <!-- end s-works -->
       <!-- # footer 
@@ -302,7 +320,7 @@
       <footer id="footer" class="s-footer target-section">
         <div class="row">
           <div class="column lg-12">
-            <div class="section-header light-on-dark" data-num="03">
+            <div class="section-header light-on-dark" data-num="05">
               <h2 class="text-display-title">Get In Touch.</h2>
             </div>
             <!-- end section-header -->
@@ -311,7 +329,7 @@
         <div class="row s-footer__content">
           <div class="column xl-6 md-12 s-footer__block s-footer__about">
             <p id="getInTouch" class="attention-getter">
-              <!-- Akan diisi dari API --> Loading...
+              <!-- Akan diisi dari API -->
             </p>
           </div>
           <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
@@ -322,7 +340,7 @@
               </div>
               <div class="column xl-6 md-6 tab-12">
                 <h5>Contact Me</h5>
-                <ul class="link-list">Loading...</ul>
+                <ul class="link-list"></ul>
               </div>
             </div>
           </div>
@@ -371,10 +389,12 @@
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-      const GAS_BASE_URL = "https://script.google.com/macros/s/AKfycby9uHcbBhrlgkUQL-rraOaPEIi1lHpR--NtojotEH5ZRp2KuXTa6FxD_HN94WWdsI_8-w/exec";
+      const GAS_BASE_URL = "https://script.google.com/macros/s/AKfycbzfot4xVc_0gnj5VaUTRHXKY7ndO6RDof2ngR5xiQQVSAqubzT98Gswa0EeV-jg0A1t4A/exec";
       const ICONS = {
         linkedin: `
         
+													
+													
 													
 													<svg
 														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -384,6 +404,8 @@
     `,
         github: `
         
+													
+													
 													
 													<svg
 														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -406,6 +428,8 @@
         email: `
         
 													
+													
+													
 													<svg
 														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             viewBox="0 0 24 24" style="fill:rgba(0,0,0,1);">
@@ -421,16 +445,12 @@
           // INTRO
           // -----------------------------
           document.getElementById("intro-title").innerHTML = data.intro;
-          const experienceloader = document.getElementById("experience-loader");
-          const toolsloader = document.getElementById("tools-loader");
-          const skillsloader = document.getElementById("skills-loader");
-          experienceloader.style.display = "none";
-          toolsloader.style.display = "none";
-          skillsloader.style.display = "none";
           // -----------------------------
           // SUMMARY
           // -----------------------------
           const summaryParagraphs = data.summary.split(/\n\s*\n/).map(p => `
+													
+													
 													
 													<p class="attention-getter">${p}</p>`).join("");
           document.getElementById("summary-container").innerHTML = summaryParagraphs;
@@ -454,46 +474,44 @@
           // -----------------------------
           document.getElementById("getInTouch").innerHTML = data.getInTouch.replace(/\n/g, " < br > ");
           // -----------------------------
-          // EXPERIENCES
+          // WORK HISTORY
           // -----------------------------
-          const expList = document.getElementById("experience-list");
-          expList.innerHTML = "";
-          data.experiences.forEach(item => {
-            const logoHTML = item.logo ? `
+          if (data.experiences && Array.isArray(data.experiences)) {
+            const timelineContainer = document.querySelector(".timeline");
+            timelineContainer.innerHTML = ""; // clear static items
+            data.experiences.forEach(item => {
+              const logo = item.logo ? `
+													
+													<img src="${item.logo}" class="company-logo" alt="${item.company}">` : `
 														
-													<img class="company-logo" src="${item.logo}" alt="${item.company}">` : `
-															
-														<div class="company-logo fallback">${item.company.substring(0,2).toUpperCase()}</div>`;
-            const html = `
-                
-															
-														<li class="experience-item">
-															<div class="company">
-                        ${logoHTML}
-                        
-																	
-																<div class="company-meta">
-																	<div class="company-name">${item.company}</div>
-																	<div class="company-role">${item.role}</div>
-																	<div class="company-period">${item.period}</div>
-																</div>
-															</div>
-														</li>
-            `;
-            expList.insertAdjacentHTML("beforeend", html);
-          });
+														<div class="company-logo fallback">${item.company?.substring(0,2).toUpperCase()}</div>`;
+              const html = `
+      
+														
+														<div class="timeline-item">
+															<div class="timeline-role">${item.role || "-"}</div>
+															<div class="timeline-company">${item.company || "-"}</div>
+															<div class="timeline-period">${item.period} ${item.location || ""}</div>
+															<div class="timeline-desc">
+          ${item.description || ""}
+        </div>
+														</div>
+    `;
+              timelineContainer.innerHTML += html;
+            });
+          }
           // -----------------------------
           // SKILLS
           // -----------------------------
-          document.getElementById("skills-list").innerHTML = data.skills.map(s => `
-															
-														<li>${s.value}</li>`).join("");
+          document.getElementById("skills-pill-list").innerHTML = data.skills.map(s => `
+														
+														<span class="pill">${s.value}</span>`).join("");
           // -----------------------------
           // TOOLS
           // -----------------------------
-          document.getElementById("tools-list").innerHTML = data.tools.map(s => `
-															
-														<li>${s.value}</li>`).join("");
+          document.getElementById("tech-pill-list").innerHTML = data.tools.map(s => `
+														
+														<span class="pill">${s.value}</span>`).join("");
           // -----------------------------
           // CONTACTS (Intro icons + footer list + Message Me)
           // -----------------------------
@@ -507,11 +525,15 @@
             introSocial.insertAdjacentHTML("beforeend", `
                 
 															
+														
+														
 														<li>
 															<a href="${c.link}" target="_blank">
                         ${ICONS[lower] || ""}
                         
 																	
+																
+																
 																<span class="u-screen-reader-text">${c.value}</span>
 															</a>
 														</li>
@@ -519,6 +541,8 @@
             footerEmailList.insertAdjacentHTML("beforeend", `
                 
 															
+														
+														
 														<li>
 															<a href="${c.link}">${c.value}</a>
 														</li>
@@ -534,30 +558,43 @@
           const response = await fetch(`${GAS_BASE_URL}?sheet=portfolios`);
           const portfolios = await response.json();
           const wrapper = document.getElementById("portfolio-wrapper");
-          wrapper.innerHTML = ""; // clear
-          portfolios.forEach(item => {
-            wrapper.insertAdjacentHTML("beforeend", `
-                
-															
-														<div class="s-testimonials__slide swiper-slide">
-															<strong>${item.title}</strong>
-															<p>${item.description}</p>
-															<strong>${item.tags}</strong>
+          wrapper.innerHTML = "";
+          portfolios.forEach((item, index) => {
+            const id = `portfolio-detail-${index}`;
+            const image = item.image || "images/placeholder.png";
+            // CARD PORTFOLIO
+            const card = `
+        
+														<div class="portfolio-card">
+															<a href="#${id}" 
+             class="glightbox-portfolio" 
+             data-glightbox="type: inline" 
+             data-gallery="portfolio">
+																<img src="${image}" alt="${item.title}" class="portfolio-image" />
+																<div class="portfolio-content">
+																	<div class="portfolio-title">${item.title}</div>
+																	<div class="portfolio-desc">${item.description}</div>
+																</div>
+															</a>
 														</div>
-            `);
+														<!-- HIDDEN POPUP MODAL CONTENT -->
+														<div id="${id}" class="glightbox-portfolio-detail" style="display:none;">
+															<h2 class="portfolio-detail-title">${item.title}</h2>
+															<div class="portfolio-tags">
+            ${item.tags}
+          </div>
+															<p>${item.description}</p>
+															<img class="portfolio-detail-img" src="${image}" />
+														</div>
+      `;
+            wrapper.insertAdjacentHTML("beforeend", card);
           });
-          // Reinitialize swiper after dynamic insert
-          new Swiper('.swiper-container', {
-            loop: portfolios.length > 2,
-            autoplay: {
-              delay: 4500,
-              disableOnInteraction: false
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true
-            },
-            speed: 6000,
+          // INIT GLIGHTBOX
+          GLightbox({
+            selector: ".glightbox-portfolio",
+            touchNavigation: true,
+            loop: true,
+            zoomable: false
           });
         } catch (err) {
           console.error("Error loading portfolio:", err);
@@ -567,5 +604,6 @@
       loadAll();
       loadPortfolio();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   </body>
 </html>
