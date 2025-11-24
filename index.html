@@ -584,6 +584,7 @@
           wrapper.innerHTML = "";
           portfolios.forEach((item, index) => {
             const id = `portfolio-detail-${index}`;
+            const desc = item.description.replace(/\n/g, "<br>");
             const image = item.image || "images/placeholder.png";
             // CARD PORTFOLIO
             const card = `
@@ -597,7 +598,7 @@
 																<img src="${image}" alt="${item.title}" class="portfolio-image" />
 																<div class="portfolio-content">
 																	<div class="portfolio-title">${item.title}</div>
-																	<div class="portfolio-desc">${item.description}</div>
+																	<div class="portfolio-desc">${truncate(item.description, 150)}</div>
 																</div>
 															</a>
 														</div>
@@ -607,8 +608,8 @@
 															<div class="portfolio-tags">
             ${item.tags}
           </div>
-															<p>${item.description}</p>
-															<img class="portfolio-detail-img" src="${image}" />
+															<p clas="preserve-newline">${desc}</p>
+															<a href="${image}" target="_blank"><img class="portfolio-detail-img" src="${image}" /></a>
 														</div>
       `;
             wrapper.insertAdjacentHTML("beforeend", card);
@@ -624,6 +625,12 @@
           console.error("Error loading portfolio:", err);
         }
       }
+
+      function truncate(text, max = 150) {
+  if (!text) return "";
+  return text.length > max ? text.substring(0, max) + "..." : text;
+}
+
       // Jalankan hanya 1 kali
       loadAll();
       loadPortfolio();
